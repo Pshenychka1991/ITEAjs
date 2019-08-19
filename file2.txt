@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-qwerty5678
-=======
-qwerty1234
->>>>>>> master
+qwerty
