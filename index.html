@@ -2,15 +2,89 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title></title>
-<link rel="stylesheet" href="style.css">
-
+<title>Todo</title>
+<style> 
+	section {
+		border: 2px solid blue;
+		margin: 0 auto;
+		width: 400px;
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+	}
+	input {
+		font-size: 20px;
+		border: 1px solid orange;
+	}
+	button {
+		padding: 2px;
+		width: 100px;
+		margin: 0 auto;
+		font-size: 18px;
+		border: 1px solid orange;
+		cursor: pointer;
+		outline: none;	
+	}
+	button:hover {
+		background-color: orange;
+	}
+	ul {
+		width: 200px;
+		margin: 0 auto;
+	}
+	h5 {
+		text-align: center;
+	}
+	#first {
+		background-color: yellow;
+		border: 3px solid black;
+	}
+</style>
 </head>
-<body>
+<body>	
+	<section>
+		<input type="text" name="">
+		<button>Add Task</button>
+		<button id="first" onclick="f1()" >Main task</button>
+	</section>		
+	<h5>List of Task</h5>
+	<section>
+		<ul></ul>
+	</section>
 
-<p>
-	s
-</p>
-<script src="hw1.js" ></script>
+<script src="fibo.js" >
+	const inp = document.querySelector("input");
+	const addTaskBtn = document.querySelector("button");
+	const list = document.querySelector("ul");
+	const mainTaskBtn = document.getElementById("first");
+	
+	function getInputValue(inputElement){
+		return inputElement.value;
+		
+	}
+	function createElementWithText (elementName, text) {
+		elemName = document.createElement(elementName);
+		elemName.textContent = text;
+		return elemName;
+
+	}
+	function appendChildTodo (parent, child) {
+		parent.appendChild (child);
+		
+	}
+	addTaskBtn.addEventListener('click', ()=> {
+		if (getInputValue(inp)) {
+			let child = createElementWithText ('li', getInputValue(inp));	
+			appendChildTodo (list, child);
+		}
+	f1 (){
+		if (getInputValue(inp)) {
+			let mainTask = createElementWithText('li', getInputValue(inp));	
+			appendChildTodo (list, child);
+		}
+	}
+
+	})
+</script>
 </body>
 </html>
