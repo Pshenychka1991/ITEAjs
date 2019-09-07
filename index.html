@@ -5,16 +5,19 @@
 <title>Todo</title>
 <style> 
 	section {
-		border: 2px solid blue;
+		/* border: 3px solid #FF9F82; */
 		margin: 0 auto;
-		width: 400px;
+		/* width: 80%; */
 		display: flex;
 		flex-direction: column;
 		padding: 20px;
+		background-color: #65D7E9;
 	}
 	input {
 		font-size: 20px;
 		border: 1px solid orange;
+		background-color: #E3E99B;
+		
 	}
 	button {
 		padding: 2px;
@@ -24,67 +27,54 @@
 		border: 1px solid orange;
 		cursor: pointer;
 		outline: none;	
+		margin-top: 1%;
 	}
 	button:hover {
 		background-color: orange;
 	}
 	ul {
 		width: 200px;
-		margin: 0 auto;
+		margin-left: 5%;
+		font-size: 130%;
+		height: 400px;
 	}
-	h5 {
+	h3 {
+		width: 80%;
 		text-align: center;
+	/* 	background-color: #46FFCE; */
+		margin: 2px auto;
+		font-size: 160%;
+		color: red;
 	}
 	#first {
 		background-color: yellow;
 		border: 3px solid black;
+		margin-left: 49%;
+		margin-top: 4%;
+		transform: scale(1.6);
+	}
+	#delete:hover {
+		background-color: red;
 	}
 </style>
 </head>
 <body>	
 	<section>
-		<input type="text" name="">
+		<input type="text" name=""  placeholder="Придумай собі таску!">
 		<button>Add Task</button>
-		<button id="first" onclick="f1()" >Main task</button>
-	</section>		
-	<h5>List of Task</h5>
+		<button id="delete">Delete task</button>
+		<div>		
+			<input type="checkbox" id="first" name="main"> main task
+		</div>			
+	</section>
+	<hr>
+	<hr>		
+	<h3>List of Task:</h3>
 	<section>
 		<ul></ul>
 	</section>
 
-<script src="fibo.js" >
-	const inp = document.querySelector("input");
-	const addTaskBtn = document.querySelector("button");
-	const list = document.querySelector("ul");
-	const mainTaskBtn = document.getElementById("first");
-	
-	function getInputValue(inputElement){
-		return inputElement.value;
-		
-	}
-	function createElementWithText (elementName, text) {
-		elemName = document.createElement(elementName);
-		elemName.textContent = text;
-		return elemName;
-
-	}
-	function appendChildTodo (parent, child) {
-		parent.appendChild (child);
-		
-	}
-	addTaskBtn.addEventListener('click', ()=> {
-		if (getInputValue(inp)) {
-			let child = createElementWithText ('li', getInputValue(inp));	
-			appendChildTodo (list, child);
-		}
-	f1 (){
-		if (getInputValue(inp)) {
-			let mainTask = createElementWithText('li', getInputValue(inp));	
-			appendChildTodo (list, child);
-		}
-	}
-
-	})
+<script src="object.js" >
 </script>
 </body>
 </html>
