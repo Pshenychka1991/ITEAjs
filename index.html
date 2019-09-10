@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Todo</title>
+<style> 
+	section {
+		/* border: 3px solid #FF9F82; */
+		margin: 0 auto;
+		/* width: 80%; */
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		background-color: #65D7E9;
+	}
+	input {
+		font-size: 20px;
+		border: 1px solid orange;
+		background-color: #E3E99B;
+		
+	}
+	button {
+		padding: 2px;
+		width: 100px;
+		margin: 0 auto;
+		font-size: 18px;
+		border: 1px solid orange;
+		cursor: pointer;
+		outline: none;	
+		margin-top: 1%;
+	}
+	button:hover {
+		background-color: orange;
+	}
+	ul {
+		width: 200px;
+		margin-left: 5%;
+		font-size: 130%;
+		height: 400px;
+	}
+	h3 {
+		width: 80%;
+		text-align: center;
+	/* 	background-color: #46FFCE; */
+		margin: 2px auto;
+		font-size: 160%;
+		color: red;
+	}
+	#first {
+		background-color: yellow;
+		border: 3px solid black;
+		margin-left: 49%;
+		margin-top: 4%;
+		transform: scale(1.6);
+	}
+	#delete:hover {
+		background-color: red;
+	}
+</style>
+</head>
+<body>	
+	<section>
+		<input type="text" name=""  placeholder="Придумай собі таску!">
+		<button>Add Task</button>
+		<button id="delete">Delete task</button>
+		<div>		
+			<input type="checkbox" id="first" name="main"> main task
+		</div>			
+	</section>
+	<hr>
+	<hr>		
+	<h3>List of Task:</h3>
+	<section>
+		<ul></ul>
+	</section>
+
+<script src="object.js" >
+</script>
+</body>
+</html>
